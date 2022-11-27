@@ -1,0 +1,14 @@
+<h1>Formulario de colores</h1>
+<form action="/color" method="post" enctype="form-data">
+    <input type="text" placeholder="Ingrese un color" name="color">
+    <input type="submit" value="Enviar">
+</form>
+{{#if colors.length}}
+<ul>
+    {{#each colors}}
+    <li style="color:{{this}}">{{this}}</li>
+    {{/each}}
+</ul>
+{{else}}
+<p>Agregue colores para ver la lista.</p>
+{{/if}}
